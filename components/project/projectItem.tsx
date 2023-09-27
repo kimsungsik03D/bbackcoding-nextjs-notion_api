@@ -16,13 +16,17 @@ const projectItem = ({ data }: any) => {
     const endDateArray = end.split("-");
 
     const startData = new Date(
-      startDataArray[0],
-      startDataArray[1],
-      startDataArray[2]
+      Number(startDataArray[0]),
+      Number(startDataArray[1]),
+      Number(startDataArray[2])
     );
-    const endData = new Date(endDateArray[0], endDateArray[1], endDateArray[2]);
+    const endData = new Date(
+      Number(endDateArray[0]),
+      Number(endDateArray[1]),
+      Number(endDateArray[2])
+    );
 
-    const diffinMs = Math.abs(endData - startData);
+    const diffinMs = Math.abs(Number(endData) - Number(startData));
     const result = diffinMs / (1000 * 60 * 60 * 24);
     return result;
   };
