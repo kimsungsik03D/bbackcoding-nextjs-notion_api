@@ -44,12 +44,12 @@ const Projects = async () => {
   const projects = await getData();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 mb-10 ">
+    <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-3">
       <h1 className="text-4xl font-bold sm:text-6xl">
         총 프로젝트 :
         <span className="pl-4 text-blue-500">{projects.results.length}</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 m-6 px-20 py-10 gap-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-12 m-4 gap-8">
         {projects.results.map((value: any, index: number) => (
           <ProjectItem key={value.id} data={value} />
         ))}

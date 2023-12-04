@@ -34,7 +34,7 @@ const projectItem = ({ data }: any) => {
   return (
     <div className="project-card">
       <Image
-        className="project-img"
+        className="rounded-t-xl h-3/6 object-cover"
         src={imgSrc}
         alt="cover"
         width={450}
